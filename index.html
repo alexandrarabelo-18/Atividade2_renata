@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -14,7 +15,12 @@
     <!-- Define o ícone exibido na aba do navegador -->
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/9/9f/Queen_logo.svg">
 
-    <!--Faz a ligação entre o HTML e o arquivo CSS responsável pela estilização da página -->
+    <!-- Importa as fontes Roboto e Oswald do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Faz a ligação entre o HTML e o arquivo CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -24,16 +30,18 @@
     <header id="topo">
         <h1>Queen: A Lenda do Rock</h1>
 
-        <p>Conheça a história de uma das maiores bandas de rock do mundo!</p>
+        <p class="subtitulo">
+            Conheça a história de uma das maiores bandas de rock do mundo!
+        </p>
 
-        <!-- Menu com links para as seções da própria página -->
+        <!-- Menu com links para seções e para outra página HTML -->
         <nav>
-            <ul>
-             <li><a href="#historia">História da banda</a></li>
-             <li><a href="#integrantes">Integrantes</a></li>
-             <li><a href="#musicas">Músicas famosas</a></li>
-             <li><a href="#video">Vídeo musical</a></li>
-             <li><a href="curiosidades.html">Curiosidades</a></li>
+            <ul class="menu">
+                <li><a href="#historia">História da banda</a></li>
+                <li><a href="#integrantes">Integrantes</a></li>
+                <li><a href="#musicas">Músicas famosas</a></li>
+                <li><a href="#video">Vídeo musical</a></li>
+                <li><a href="curiosidades.html">Curiosidades</a></li>
             </ul>
         </nav>
     </header>
@@ -42,7 +50,7 @@
     <main>
 
         <!-- Seção com informações sobre a história da banda -->
-        <section id="historia">
+        <section id="historia" class="caixa">
             <h2>A história do Queen</h2>
 
             <p>
@@ -52,7 +60,7 @@
                 marcantes.
             </p>
 
-            <p>
+            <p class="destaque">
                 Freddie Mercury ficou conhecido por sua voz marcante
                 e sua presença de palco. A banda também se destacou
                 pela combinação de diferentes estilos musicais e
@@ -71,7 +79,7 @@
         </section>
 
         <!-- Seção com a imagem e as informações dos integrantes -->
-        <section id="integrantes">
+        <section id="integrantes" class="caixa">
             <h2>Os integrantes da banda</h2>
 
             <!-- Exibe uma imagem dos integrantes do Queen -->
@@ -87,7 +95,7 @@
             </p>
 
             <!-- Lista não ordenada com os integrantes e suas funções -->
-            <ul>
+            <ul class="lista">
                 <li>Freddie Mercury: vocalista e pianista.</li>
                 <li>Brian May: guitarrista e vocalista.</li>
                 <li>Roger Taylor: baterista e vocalista.</li>
@@ -96,7 +104,7 @@
         </section>
 
         <!-- Seção dedicada às músicas famosas da banda -->
-        <section id="musicas">
+        <section id="musicas" class="caixa">
             <h2>Músicas famosas do Queen</h2>
 
             <p>
@@ -109,7 +117,7 @@
             <h3>Algumas das músicas mais conhecidas</h3>
 
             <!-- Lista ordenada com títulos de músicas do Queen -->
-            <ol>
+            <ol class="lista">
                 <li>Bohemian Rhapsody</li>
                 <li>We Will Rock You</li>
                 <li>We Are the Champions</li>
@@ -125,7 +133,7 @@
         </section>
 
         <!-- Seção que apresenta um vídeo musical do Queen -->
-        <section id="video">
+        <section id="video" class="caixa">
             <h2>Vídeo musical</h2>
 
             <p>
@@ -133,18 +141,18 @@
                 da banda.
             </p>
 
-            <!-- Incorpora o vídeo do YouTube à página -->
-            <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube-nocookie.com/embed/fJ9rUzIMcZQ"
-                title="Queen - Bohemian Rhapsody"
-                allowfullscreen>
-            </iframe>
+            <!-- Contêiner que adapta o vídeo à largura disponível -->
+            <div class="video">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/fJ9rUzIMcZQ"
+                    title="Queen - Bohemian Rhapsody"
+                    allowfullscreen>
+                </iframe>
+            </div>
         </section>
 
         <!-- Seção com links externos para conhecer mais sobre a banda -->
-        <section id="links">
+        <section id="links" class="caixa chamada">
             <h2>Conheça mais sobre o Queen</h2>
 
             <p>
@@ -167,6 +175,13 @@
                     canal oficial do Queen no YouTube
                 </a>
                 para assistir a outros vídeos.
+            </p>
+
+            <!-- Link interno para abrir outro arquivo HTML -->
+            <p>
+                <a class="botao" href="curiosidades.html">
+                    Conheça curiosidades sobre o Queen
+                </a>
             </p>
         </section>
 
